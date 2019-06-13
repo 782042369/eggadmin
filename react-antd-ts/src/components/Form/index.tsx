@@ -2,7 +2,7 @@
  * @Author: 杨宏旋
  * @Date: 2019-05-21 16:13:12
  * @LastEditors: 杨宏旋
- * @LastEditTime: 2019-06-12 18:57:07
+ * @LastEditTime: 2019-06-13 20:30:19
  * @Description: 传统
  */
 import React from 'react'
@@ -88,7 +88,7 @@ class index extends React.Component<IProps, IState> {
 				if (type === 'dart') {
 					formItemList.push(
 						<FormItem label={lable} key={field}>
-							<Darft editorState={formList[0].render} val={formList[0].setValue} key={formList} />
+							<Darft editorState={formList[0].render} val={formList[0].setValue} key={field} />
 						</FormItem>
 					)
 				} else if (type === 'imgselect') {

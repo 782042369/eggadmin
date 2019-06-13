@@ -3,7 +3,7 @@
  * @LastEditors: 杨宏旋
  * @Description: 角色
  * @Date: 2019-05-05 15:48:46
- * @LastEditTime: 2019-05-30 18:01:54
+ * @LastEditTime: 2019-06-13 20:27:38
  */
 import * as React from 'react'
 
@@ -23,6 +23,7 @@ interface IState {
 	status: any
 	cate_id: any
 	description: any
+	content: any
 }
 class index extends React.Component<IProps, IState> {
 	constructor(props: any) {
@@ -36,7 +37,8 @@ class index extends React.Component<IProps, IState> {
 			title: '',
 			status: '',
 			cate_id: '',
-			description: ''
+			description: '',
+			content: ''
 		}
 	}
 	handleSubmit = (values: any) => {
@@ -89,6 +91,9 @@ class index extends React.Component<IProps, IState> {
 			})
 		}
 	}
+	editorState(e: any): void {
+		console.log(e)
+	}
 
 	public render() {
 		const formList = [
@@ -101,7 +106,6 @@ class index extends React.Component<IProps, IState> {
 				required: true,
 				message: 'Please input your title!'
 			},
-
 			{
 				type: 'select',
 				lable: '所属分类',
@@ -169,7 +173,9 @@ class index extends React.Component<IProps, IState> {
 			{
 				type: 'dart',
 				lable: '文章内容',
-				field: 'content'
+				field: 'content',
+				setValue: this.state.content,
+				render: (e: any) => this.editorState(e)
 			}
 		]
 		return <BashForm formList={formList} h1title={this.state.h1title} formSubmit={this.handleSubmit} />

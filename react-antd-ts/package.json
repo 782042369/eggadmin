@@ -15,7 +15,7 @@
     "@types/react-loadable": "^5.5.1",
     "@types/react-router-dom": "^4.3.3",
     "antd": "^3.19.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "babel-plugin-import": "^1.11.2",
     "customize-cra": "^0.2.12",
     "husky": "^2.3.0",

@@ -21,7 +21,7 @@
     "husky": "^2.3.0",
     "install": "^0.12.2",
     "mobx": "^5.9.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "npm": "^6.9.0",
     "react": "^16.8.6",
     "react-app-rewired": "^2.1.3",
